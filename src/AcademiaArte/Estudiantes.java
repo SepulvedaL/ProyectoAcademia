@@ -3,7 +3,7 @@ package AcademiaArte;
  *  Ejercico hecho por Luis
  * @author Luis Sepulveda and Oscar Lopez
  */
-import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class Estudiantes {
     private String id;
@@ -28,25 +28,12 @@ public class Estudiantes {
     }
     
     public static Estudiantes crearEstudianteDesdeConsola() {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Ingrese el ID del estudiante: ");
-        String id = scanner.nextLine();
-
-        System.out.print("Ingrese el nombre del estudiante: ");
-        String nombre = scanner.nextLine();
-        
-        System.out.print("Ingrese el apellido del estudiante: ");
-        String apellido = scanner.nextLine();
-        
-        System.out.print("Ingrese la direccion del estudiante: ");
-        String direccion = scanner.nextLine();
-        
-        System.out.print("Ingrese el telefono del estudiante: ");
-        String tel = scanner.nextLine();
-
-        System.out.print("Ingrese la fecha de ingreso del estudiante: ");
-        String fecIngreso = scanner.nextLine();
+        String id = JOptionPane.showInputDialog(null, "Ingrese número de identificación:", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
+        String nombre = JOptionPane.showInputDialog(null, "Ingrese nombres:", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
+        String apellido = JOptionPane.showInputDialog(null, "Ingrese apellidos:", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
+        String direccion = JOptionPane.showInputDialog(null, "Ingrese dirección:", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
+        String tel = JOptionPane.showInputDialog(null, "Ingrese teléfono:", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
+        String fecIngreso = JOptionPane.showInputDialog(null, "Fecha de ingreso (dd/MM/yyyy):", "Registro de Estudiantes", JOptionPane.INFORMATION_MESSAGE);
        
         // Crear el objeto Estudiante
         Estudiantes estudiante = new Estudiantes(id, nombre, apellido, direccion, tel, fecIngreso);

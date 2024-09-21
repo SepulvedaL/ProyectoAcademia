@@ -22,10 +22,10 @@ public class ManejoPila
         Estudiantes objCon;
         
         //esta es una forma de leer una respuesta del usuario SIN NECESIDAD DE VALIDARLA, la misma ventana valida
-        resp=JOptionPane.showConfirmDialog(null,"Ingresar conferencia en la pila?","",JOptionPane.YES_NO_OPTION);
+        resp=JOptionPane.showConfirmDialog(null,"Ingresar Estudiante en la pila?","",JOptionPane.YES_NO_OPTION);
         while (resp==JOptionPane.YES_OPTION)
         {
-            //objCon=new Estudiantes();//para asegurar que sobreescriba
+            objCon=new Estudiantes();//para asegurar que sobreescriba
             objCon=Estudiantes.crearEstudianteDesdeConsola();//se recibe el objeto para apilar
             
             do{
@@ -37,7 +37,7 @@ public class ManejoPila
             
             
             objP.Push(objCon);//apilar la conferencia
-            resp=JOptionPane.showConfirmDialog(null,"Ingresar mas conferencia en la pila?","",JOptionPane.YES_NO_OPTION);
+            resp=JOptionPane.showConfirmDialog(null,"Ingresar mas Estudiantes en la pila?","",JOptionPane.YES_NO_OPTION);
         }//Fin mientras
         return objP;//se cambia el contenido de pila entonces se retorna
     }//Fin ingresardatos

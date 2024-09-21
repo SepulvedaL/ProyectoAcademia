@@ -22,7 +22,7 @@ public class ManejoCola
         int resp;//respuesta del usuario
         Estudiantes objPon;
         //esta es una forma de leer una respuesta del usuario SIN NECESIDAD DE VALIDARLA, la misma ventana valida
-        resp=JOptionPane.showConfirmDialog(null,"Ingresar ponente en cola?","",JOptionPane.YES_NO_OPTION);
+        resp=JOptionPane.showConfirmDialog(null,"Ingresar Estudiantes en cola?","",JOptionPane.YES_NO_OPTION);
         while (resp==JOptionPane.YES_OPTION)
         {
             objPon=new Estudiantes();//para asegurar que sobreescriba
@@ -35,7 +35,7 @@ public class ManejoCola
             }while(resp==JOptionPane.YES_OPTION);
 
             objC.Push(objPon);//encolar el ponente
-            resp=JOptionPane.showConfirmDialog(null,"Ingresar mas ponentes en cola?","",JOptionPane.YES_NO_OPTION);
+            resp=JOptionPane.showConfirmDialog(null,"Ingresar mas Estudiantes en cola?","",JOptionPane.YES_NO_OPTION);
         }//Fin mientras
         return objC;//se cambia el contenido de cola entonces se retorna
 }//Fin ingresardatos
